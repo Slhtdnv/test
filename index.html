@@ -1,65 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multilingual Hello</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            font-size: 5rem;
-            color: #333;
-        }
-    </style>
+	<title>Bilingual Website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div id="hello"></div>
-
-    <script>
-        const hello = document.getElementById('hello');
-        const languages = {
-            en: 'Hello',
-            es: 'Hola',
-            fr: 'Bonjour',
-            de: 'Hallo',
-            it: 'Ciao',
-            zh: '你好',
-            ja: 'こんにちは',
-            ko: '안녕하세요'
-        };
-
-        function changeLanguage(lang) {
-            hello.textContent = languages[lang];
-        }
-
-        // Change language based on browser language
-        const userLang = navigator.language || navigator.userLanguage;
-        changeLanguage(userLang.substring(0, 2));
-
-        // Add event listener to change language
-        document.addEventListener('keydown', (event) => {
-            if (event.key === '1') {
-                changeLanguage('en');
-            } else if (event.key === '2') {
-                changeLanguage('es');
-            } else if (event.key === '3') {
-                changeLanguage('fr');
-            } else if (event.key === '4') {
-                changeLanguage('de');
-            } else if (event.key === '5') {
-                changeLanguage('it');
-            } else if (event.key === '6') {
-                changeLanguage('zh');
-            } else if (event.key === '7') {
-                changeLanguage('ja');
-            } else if (event.key === '8') {
-                changeLanguage('ko');
-            }
-        });
-    </script>
+	<h1 id="hello">Hello</h1>
+	<select id="language">
+		<option value="en">English</option>
+		<option value="es">Spanish</option>
+		<option value="fr">French</option>
+	</select>
+	<script src="script.js"></script>
 </body>
 </html>
