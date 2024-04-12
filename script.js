@@ -14,3 +14,10 @@ languageSelect.addEventListener('change', () => {
 			hello.innerText = 'Hello';
 	}
 });
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZB688V73N6');
+</script>
